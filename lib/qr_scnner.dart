@@ -28,7 +28,7 @@ class _QrScannerState extends State<QrScanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("QR Code Scanner"),
+        title: const Text("QR Code Scanner"),
       ),
       body: Center(
         child: Container(
@@ -41,9 +41,9 @@ class _QrScannerState extends State<QrScanner> {
               Text(
                 qrResultShow,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold , color: Colors.deepOrange),
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold , color: Colors.deepOrange),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
 
               Card(
@@ -51,17 +51,17 @@ class _QrScannerState extends State<QrScanner> {
                 shadowColor: Colors.deepPurple,
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 300,
                       width: 300,
 
                       child: FloatingActionButton(
-                        onPressed: scanQR,
-                        child: Image.asset("assets/images/qr-scan.png" , ),backgroundColor: Colors.limeAccent.shade100,
+                        onPressed: scanQR,backgroundColor: Colors.limeAccent.shade100,
+                        child: Image.asset("assets/images/qr-scan.png" , ),
                       ) ,
                     ),
 
-                    Text("Scan" , style: TextStyle(fontWeight: FontWeight.w800 , fontSize: 20),
+                    const Text("Scan" , style: TextStyle(fontWeight: FontWeight.w800 , fontSize: 20),
                     )
                   ],
                 ),

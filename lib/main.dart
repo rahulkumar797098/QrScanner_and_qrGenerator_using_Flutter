@@ -60,26 +60,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     ///// Scanner Button
                     child: Column(
                       children: [
-                        Container(
+                        SizedBox(
                           width: 200,
                           height: 200,
                           child: FloatingActionButton(onPressed: (){
                             setState(() {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => QrScanner())) ;
                             });
-                          } , child: Padding(
+                          } ,
+                            backgroundColor: Colors.limeAccent.shade100, child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Image.asset("assets/images/qr-scan.png"),
                           ),
-                            backgroundColor: Colors.limeAccent.shade100,
                           ),
                         ),
-                        Text("QR Scanner" , style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w600))
+                        const Text("QR Scanner" , style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w600))
                       ],
                     )
                 ) ,
             
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ) ,
                 Card(
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           ),
                         ),
-                        Text("QR Generator" , style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w600),)
+                        const Text("QR Generator" , style: TextStyle(fontSize: 20 , fontWeight: FontWeight.w600),)
                       ],
                     )
                 )
